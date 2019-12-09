@@ -16,7 +16,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Courier New", Courier, monospace !important;
   letter-spacing: 0.25rem !important;
 }
 .text-yellow {
@@ -67,4 +66,20 @@ h6 {
 }
 .footer {
   background: var(--mainDark);
+}
+
+.default-background {
+  min-height: 100vh;
+  /* background: linear-gradient() */
+  background-position: center;
+  background-size: cover;
+}
+
+.btn-yellow {
+  color: var(--mainYellow);
+  border-color: var(--mainYellow);
+}
+
+.footer {
+  background: var(--mainBrown);
 }
