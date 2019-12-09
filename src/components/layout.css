@@ -68,7 +68,7 @@ h6 {
   background: var(--mainDark);
 }
 
-.default-background {
+.default-background, .about-background {
   min-height: 100vh;
   /* background: linear-gradient() */
   background-position: center;
@@ -82,4 +82,8 @@ h6 {
 
 .footer {
   background: var(--mainBrown);
+}
+
+.about-background {
+  min-height: 60vh;
 }
