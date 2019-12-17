@@ -11,12 +11,50 @@ export default class Beer extends Component {
         }
     }
     render() {
-        if(this.state.items.length > 0){
-        }
+        if (this.state.items.length > 0){
         return (
-            <div>
-              content from beer component  
+            <section className="menu py-5">
+              <div className="container">
+                <Title title="best of our menu" />
+                <div className="row mb-5">
+                    {this.state.beers.map(({node}) => {
+                        return(
+                            <div key={node.id} className="col-11 col-md-6 my-3 d-flex mx-auto">
+                                <div>
+                                <Img fixed={node.tag.fixed}/>
+                                </div>
+           
+                                <div className="flex-grow-1 px-3">
+                      <div className="d-flex justify-content-between">
+                        <h6 className="mb-0">{node.title}</h6>
+                        <h6 className="text-yellow mb-0">{node.price}</h6>
+                      </div>
+
+                      <p className="text-muted">
+                        <small>{node.description}</small>
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
+          </div>
+        </section>
         )
+    
+        }  else    {
+            return (
+                <section className="menu py-5">
+                  <div className="container">
+                    <Title title="best of our menu" />
+                    <div className="row">
+                      <div className="col-10 col-6 mx-auto text-center text-capitalize">
+                        <h1>there are no items to display</h1>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+            )
+        }
     }
 }
