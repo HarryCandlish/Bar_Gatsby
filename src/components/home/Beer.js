@@ -15,7 +15,7 @@ export default class Beer extends Component {
         return (
             <section className="menu py-5">
               <div className="container">
-                <Title title="best of our menu" />
+                <Title title="Beers On Tap" />
                 <div className="row mb-5">
                     {this.state.beers.map(({node}) => {
                         return(

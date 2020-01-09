@@ -6,16 +6,18 @@ import BackgroundSection from '../components/globals/BackgroundSection'
 import SEO from "../components/seo"
 import Info from "../components/home/Info"
 import Beer from "../components/home/Beer"
+import Menu from "../components/home/Menu"
 
 // import {FaShoppingCart} from 'react-icons/fa'
 
 const IndexPage = ({data}) => (
   <Layout>
-    <SEO title="Home" keyworsds={[`gatsby`, `application`, `react`]}/>
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
     <BackgroundSection img={data.img.childImageSharp.fluid}/>
     <Info/>
     {/* <FaShoppingCart/> */}
     <Beer items={data.beer}/>
+    <Menu />
   </Layout>
 )
 
@@ -46,7 +48,6 @@ export const query = graphql`
     }
   }
 }
-
 `;
 
 export default IndexPage
