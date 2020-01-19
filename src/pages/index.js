@@ -8,6 +8,7 @@ import Info from "../components/home/Info"
 import Beer from "../components/home/Beer"
 import Menu from "../components/home/Menu"
 
+
 // import {FaShoppingCart} from 'react-icons/fa'
 
 const IndexPage = ({data}) => (

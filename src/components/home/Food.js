@@ -8,7 +8,6 @@ export default function Food({ food }) {
           <Img fluid={food.image.fluid} className="card-img-top" />
           <div className="card-body text-center">
             <h6>{food.title}</h6>
-            <h6>${food.price}</h6>
           </div>
         </div>
       </div>

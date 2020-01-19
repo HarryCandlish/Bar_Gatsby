@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Title from "../globals/Title"
 import Img from "gatsby-image"
+import Reservation from "./Form"
+import {Link} from 'gatsby'
+
 
 export default class Beer extends Component {
     constructor(props){
@@ -15,7 +18,10 @@ export default class Beer extends Component {
         return (
             <section className="menu py-5">
               <div className="container">
+              <Link to={Reservation}><button>Make Reservation
+                           </button></Link>
                 <Title title="Beers On Tap" />
+                
                 <div className="row mb-5">
                     {this.state.beers.map(({node}) => {
                         return(
@@ -23,11 +29,10 @@ export default class Beer extends Component {
                                 <div>
                                 <Img fixed={node.tag.fixed}/>
                                 </div>
-           
-                                <div className="flex-grow-1 px-3">
+      
+                      <div className="flex-grow-1 px-3">
                       <div className="d-flex justify-content-between">
                         <h6 className="mb-0">{node.title}</h6>
-                        <h6 className="text-yellow mb-0">{node.price}</h6>
                       </div>
 
                       <p className="text-muted">
