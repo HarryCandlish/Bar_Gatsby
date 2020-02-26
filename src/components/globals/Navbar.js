@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
 import {Link} from "gatsby"
-import logo from '../../images/beer.png'
-import {FaShoppingCart} from "react-icons/fa"
+
+import navigationStyles from "../../modules/nav.module.scss"
+
 
 export default class Navbar extends Component {
     state = {
@@ -12,12 +13,12 @@ export default class Navbar extends Component {
         {
           id: 1,
           path: "/",
-          text: "home"
+          text: "Home"
         },
         {
           id: 2,
           path: "/about",
-          text: "about"
+          text: "About"
         }
       ]
     };
@@ -34,13 +35,7 @@ export default class Navbar extends Component {
       };
     render() {
       return (
-        <nav className="navbar navbar-dark navbar-expand-md bg-dark">
-          <Link to="/" className="navbar-brand">
-            <img src={logo} alt="logo" />
-            {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon
-  Creative Commons (Attribution 3.0 Unported);
-  https://www.iconfinder.com/webalys */}
-          </Link>
+        <nav className={navigationStyles.nav}>
           <button
             className="navbar-toggler"
             type="button"
@@ -49,20 +44,16 @@ export default class Navbar extends Component {
             <span className="navbar-toggler-icon" />
           </button>
           <div className={this.state.css}>
-          <ul className="navbar-nav mx-auto">
+          <ul className="nav-list">
             {this.state.links.map(link => {
               return (
-                <li key={link.id} className="nav-item">
-                  <Link to={link.path} className="nav-link text-capitalize ">
+                <li key={link.id} className={navigationStyles.nav_item}>
+                  <Link to={link.path} className={navigationStyles.nav_link}>
                     {link.text}
                   </Link>
                 </li>
               );
             })}
-
-            <li className="nav-item  ml-sm-5">
-              <FaShoppingCart className="cart-icon snipcart-checkout" />
-            </li>
           </ul>
         </div>
       </nav>

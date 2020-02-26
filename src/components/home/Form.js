@@ -7,7 +7,7 @@ export default function Form() {
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <form
-            action="https://formspree.io/learncodetutorial@gmail.com"
+            action="https://formspree.io/hcnd90@gmail.com"
             method="POST"
           >
             {/* name */}
@@ -45,7 +45,7 @@ export default function Form() {
                 placeholder="your description here....."
               />
             </div>
-            {/* email */}
+            {/* submit */}
             <button
               type="submit"
               className="btn btn-yellow btn-block text-capitalize mt-5"
