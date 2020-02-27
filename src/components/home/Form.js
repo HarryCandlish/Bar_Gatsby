@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "../Globals/Title";
+import Title from "../globals/Title";
 export default function Form() {
   return (
     <section className="contact py-5">
