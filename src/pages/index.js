@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import Info from "../components/home/Info"
 import Beer from "../components/home/Beer"
 import Menu from "../components/home/Menu"
-
+import Events from "../components/home/Events"
 
 // import {FaShoppingCart} from 'react-icons/fa'
 
@@ -19,6 +19,7 @@ const IndexPage = ({data}) => (
     {/* <FaShoppingCart/> */}
     <Beer items={data.beer}/>
     <Menu />
+    <Events/>
   </Layout>
 )
 

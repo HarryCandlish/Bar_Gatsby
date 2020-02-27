@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "../Globals/Title";
+import Title from "../globals/Title";
 import { StaticQuery, graphql } from "gatsby";
 import Food from "./Food";
 const getMenu = graphql`
