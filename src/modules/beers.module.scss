@@ -1,0 +1,74 @@
+.beers {
+    padding: 0;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.gridItem {
+    height: 40rem;
+    padding: 5rem;
+    color: #fafafa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    align-items: center;
+}
+
+.gridItem::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(135deg, rgba(49, 24, 131, 0.9)0%, rgba(72,56,149,0.8)
+    100%);
+    z-index: -1;
+}
+
+.gridItem h6 {
+    font-family: "Aldrich", sans-serif;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.titleHeading {
+    width: 100%;
+    max-width: 50rem;
+    color: black;
+    text-transform: uppercase;
+    transform: translate(20%);
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.titleHeading h3 {
+    font-size: 1.6rem;
+}
+
+.titleHeading h1 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.titleHeading h1 {
+    text-transform: lowercase;
+}
+
+
+
+
+
+

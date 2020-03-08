@@ -6,8 +6,9 @@ import BackgroundSection from '../components/globals/BackgroundSection'
 import SEO from "../components/seo"
 import Info from "../components/home/Info"
 import Beer from "../components/home/Beer"
-import Menu from "../components/home/Menu"
+import Food from "../components/home/Food"
 import Events from "../components/home/Events"
+
 
 // import {FaShoppingCart} from 'react-icons/fa'
 
@@ -15,10 +16,12 @@ const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
     <BackgroundSection img={data.img.childImageSharp.fluid}/>
+    <Link to='/reservation/'><button>Make Reservation
+                           </button></Link>
     <Info/>
     {/* <FaShoppingCart/> */}
     <Beer items={data.beer}/>
-    <Menu />
+    <Food />
     <Events/>
   </Layout>
 )
@@ -42,7 +45,7 @@ export const query = graphql`
         pouring
         description
       	tag {
-          fixed(width:50,height:50){
+          fixed(width:200,height:200){
             ...GatsbyContentfulFixed_tracedSVG
           }
         }

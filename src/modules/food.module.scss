@@ -1,0 +1,73 @@
+.menu {
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    position: relative;
+}
+
+.menu::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.7rem;
+}
+
+.food {
+    color: #fafafa;
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// .textBox {
+//     padding: 0 1.5rem;
+//     margin-bottom: 2rem;
+//     position: relative;
+// }
+
+
+.icon {
+    width: 200px;
+    height: 200px;
+}
+
+.textBox {
+    width: 100%;
+    max-width: 50rem;
+    color: black;
+    text-transform: uppercase;
+    transform: translate(20%);
+}
+
+.textBox h3 {
+    font-size: 1.6rem;
+}
+
+.textBox h1 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.textBox h1 {
+    text-transform: lowercase;
+}
+
+.btn {
+    background-color: #eb648c;
+    border-radius: 2rem;
+    color: black;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+}
+
+.btn:hover {
+    background-color: #ce587b;
+}

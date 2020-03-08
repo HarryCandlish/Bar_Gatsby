@@ -1,62 +1,57 @@
 import React, { Component } from 'react'
 
-import {Link} from "gatsby"
-
-import navigationStyles from "../../modules/nav.module.scss"
-
+import headerStyles from "../../modules/header.module.scss"
 
 export default class Navbar extends Component {
-    state = {
-      navbarOpen: false,
-      css: "collapse navbar-collapse",
-      links: [
-        {
-          id: 1,
-          path: "/",
-          text: "Home"
-        },
-        {
-          id: 2,
-          path: "/about",
-          text: "About"
-        }
-      ]
-    };
-    navbarHandler = () => {
-        this.state.navbarOpen
-          ? this.setState({
-              navbarOpen: false,
-              css: "collapse navbar-collapse"
-            })
-          : this.setState({
-              navbarOpen: true,
-              css: "collapse navbar-collapse show"
-            });
-      };
-    render() {
+  render() {
+
+      // const selectElement = (s) => document.querySelector(s);
+
+      // selectElement(s'.open').addEventListener('click', () => {
+      //   selectElement(s: 'navList').classList.add('active');
+      // });
+
+      // selectElement(s: '.close').addEventListener('click', () => {
+      //   selectElement(s: 'navList').classList.remove('active');
+      // });
+      
+
       return (
-        <nav className={navigationStyles.nav}>
-          <button
-            className="navbar-toggler"
-            type="button"
-            onClick={this.navbarHandler}
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className={this.state.css}>
-          <ul className="nav-list">
-            {this.state.links.map(link => {
-              return (
-                <li key={link.id} className={navigationStyles.nav_item}>
-                  <Link to={link.path} className={navigationStyles.nav_link}>
-                    {link.text}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+        
+      <header>
+        <div className={headerStyles.container}>
+            <nav>
+              <div className={headerStyles.navBrand} >
+                <a href="/home">
+                  {/* <img src="images/logo.png" alt=""/> */}
+                </a>
+              </div>
+                <div className={`${headerStyles.menuIcons} ${headerStyles.open}`}>
+                    <i className={`${headerStyles.icon} ${headerStyles.ionMdMenu}`}></i>
+                </div>
+                <ul className={headerStyles.navList}>
+                  <div className={`${headerStyles.menuIcons} ${headerStyles.close}`} >
+                      <i className={`${headerStyles.icon} ${headerStyles.ionMdMenu}`}></i>
+                  </div>
+                    <li className={headerStyles.navItem}>
+                        <a href="" className={headerStyles.navLink}>Home</a>
+                    </li>
+                    <li className={headerStyles.navItem}>
+                        <a href="" className={headerStyles.navLink}>Beer</a>
+                    </li>
+                    <li className={headerStyles.navItem}>
+                        <a href="" className={headerStyles.navLink}>Food</a>
+                    </li>
+                    <li className={headerStyles.navItem}>
+                        <a href="" className={headerStyles.navLink}>Events</a>
+                        <li className={headerStyles.navItem}>
+                        <a href="" className={headerStyles.navLink}>About</a>
+                    </li>
+                    </li>
+                </ul>
+            </nav>
         </div>
-      </nav>
+      </header>
     );
   }
 }

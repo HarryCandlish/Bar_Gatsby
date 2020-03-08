@@ -1,9 +1,14 @@
 import React from "react";
-import Title from "../globals/Title";
+
+import datepicker from 'js-datepicker'
+
+// const picker = datepicker('#picker')
+
 export default function Form() {
   return (
-    <section className="contact py-5">
-      <Title title="contact us" />
+    <section style={{backgroundColor: `#f5f5f5`, maxWidth:`60%`, position: `relative`, top:`100px`, left: `20%`}} className="contact py-5">
+        <h2 style={{textAlign: `center`}}>Make a reservation</h2>
+        <br></br>
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <form
@@ -11,47 +16,31 @@ export default function Form() {
             method="POST"
           >
             {/* name */}
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                className="form-control"
-                name="name"
-                id="name"
-                placeholder="john smith"
-              />
-            </div>
-            {/* name */}
-            {/* email */}
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="text"
-                className="form-control"
-                name="email"
-                id="email"
-                placeholder="email@email.com"
-              />
-            </div>
-            {/* email */}
-            {/* description */}
-            <div className="form-group">
-              <label htmlFor="description">Description</label>
-              <textarea
-                name="description"
-                id="description"
-                className="form-control"
-                rows="5"
-                placeholder="your description here....."
-              />
-            </div>
-            {/* submit */}
-            <button
-              type="submit"
-              className="btn btn-yellow btn-block text-capitalize mt-5"
-            >
-              submit
-            </button>
+    <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name"/>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name"/>
+    </div>
+  </div>
+  <br></br>
+  <div class="form-group">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email'/>
+  </div>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Date"/>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Time"/>
+    </div>
+  </div>
+  <br></br>
+  <div class="form-group">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder='Enquiries'/>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
       </div>

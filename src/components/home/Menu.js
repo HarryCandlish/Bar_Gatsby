@@ -1,7 +1,6 @@
 import React from "react";
-import Title from "../globals/Title";
 import { StaticQuery, graphql } from "gatsby";
-import Food from "./Food";
+// import Food from "./Food";
 const getMenu = graphql`
 {
   menu:allContentfulFood{
@@ -31,14 +30,15 @@ export default function Products() {
       render={data => {
         return (
           <section className="py-5">
-            <div className="container">
+            <h1>Food</h1>
+            {/* <div className="container">
               <Title title="our menu" />
               <div className="row">
                 {data.menu.edges.map(({ node: food }) => {
                   return <Food key={food.id} food={food} />;
                 })}
               </div>
-            </div>
+            </div> */}
           </section>
         );
       }}
