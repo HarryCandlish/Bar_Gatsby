@@ -33,10 +33,9 @@ export default function allEvents() {
       query={getEvents}
       render={data => {
         return (
-          <section className="py-5">
-            <div className="container">
-              <Title title="Upcoming Events" />
-              <div className="row">
+          <section>
+            <div>
+              <div >
                 {data.events.edges.map(({ node: event }) => {
                   return <ListOfEvents key={event.id} event={event} />;
                 })}

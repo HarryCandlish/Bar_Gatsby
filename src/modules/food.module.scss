@@ -15,19 +15,47 @@
 }
 
 .food {
-    color: #fafafa;
-    width: 100%;
+    width: 50%;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #F8F8FF ;
+    padding: 4rem;
 }
 
-// .textBox {
-//     padding: 0 1.5rem;
-//     margin-bottom: 2rem;
-//     position: relative;
-// }
+.textBox {
+    // width: 100%;
+    // max-width: 50rem;
+    // color: black;
+    // text-transform: uppercase;
+    // transform: translate(20%);
+    // position: relative;
+    // padding-top: 10%;
+    // padding-bottom: 10%;
+    // text-align: center;
+    // justify-content: center;
+    // align-items: center;
+    // left: 25%;
+    text-align: center;
+color: black;
+}
+
+
+.textBox h3 {
+    font-size: 1.6rem;
+}
+
+.textBox h1 {
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+.textBox p {
+    font-size: 1.4rem;
+    margin: 1rem;
+    text-transform: lowercase;
+}
 
 
 .icon {
@@ -35,37 +63,18 @@
     height: 200px;
 }
 
-.textBox {
-    width: 100%;
-    max-width: 50rem;
-    color: black;
-    text-transform: uppercase;
-    transform: translate(20%);
-}
-
-.textBox h3 {
-    font-size: 1.6rem;
-}
-
-.textBox h1 {
-    font-family: 'Aldrich', sans-serif;
-    font-size: 4rem;
-    margin: 1rem 0;
-}
-
-.textBox h1 {
-    text-transform: lowercase;
-}
 
 .btn {
     background-color: #eb648c;
     border-radius: 2rem;
-    color: black;
+    color: #fafafa;
     display: inline-block;
     margin-top: 2rem;
     padding: 1rem 2.5rem;
     text-transform: uppercase;
     transition: background-color 650ms;
+    position: relative;
+    font-size: 1.4rem;
 }
 
 .btn:hover {

@@ -18,9 +18,10 @@ export default class Beer extends Component {
           <section className={beerStyles.beers}>
           <div className={beerStyles.container}>
             <div className={beerStyles.titleHeading}>
-                <h3>All our beers are hand crafted in house</h3>
-                <h1>Beers on Tap</h1>
+                <h3>ALL OUR BEERS ARE HANDCRAFTED IN HOUSE</h3>
+                <h1>BEERS ON TAP</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+            </div>
             </div>
             <div className={beerStyles.grid}>
                     {this.state.beers.map(({node}) => {
@@ -34,7 +35,6 @@ export default class Beer extends Component {
                           );
                         })}
                   </div>
-              </div>
        </section>
   </div>
       )}  

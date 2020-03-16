@@ -22,7 +22,7 @@ export default function Info() {
                       <i className={`${headerStyles.icon} ${headerStyles.ionMdMenu}`}></i>
                   </div>
                     <li className={headerStyles.navItem}>
-                        <a href="" className={headerStyles.navLink}>Home</a>
+                        <a href="" className={`${headerStyles.navLink} ${headerStyles.current}`}>Home</a>
                     </li>
                     <li className={headerStyles.navItem}>
                         <a href="" className={headerStyles.navLink}>Beer</a>
@@ -32,9 +32,9 @@ export default function Info() {
                     </li>
                     <li className={headerStyles.navItem}>
                         <a href="" className={headerStyles.navLink}>Events</a>
+                    </li>
                         <li className={headerStyles.navItem}>
                         <a href="" className={headerStyles.navLink}>About</a>
-                    </li>
                     </li>
                 </ul>
             </nav>
@@ -43,13 +43,10 @@ export default function Info() {
         <section className={headerStyles.hero}>
             <div className={headerStyles.container}>
                 <div className={headerStyles.mainMessage}>
-                    <h3>Hey Day Beer and Co</h3>
-                    <h1>About</h1>
+                    <h3>Hey Day <br></br>Beer & Co</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
                         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
-                </div>
-                <div className={headerStyles.cta}>
-                    <a href="#" className={headerStyles.btn}>About</a>
+                        <a href="#" className={headerStyles.btn}>Book a Table</a>
                 </div>
             </div>
         </section>

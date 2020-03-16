@@ -1,8 +1,8 @@
 import React from "react"
 import {Link, graphql} from 'gatsby'
 
-import Layout from "../components/layout"
-import BackgroundSection from '../components/globals/BackgroundSection'
+// import Layout from "../components/layout"
+// import BackgroundSection from '../components/globals/BackgroundSection'
 import SEO from "../components/seo"
 import Info from "../components/home/Info"
 import Beer from "../components/home/Beer"
@@ -13,17 +13,15 @@ import Events from "../components/home/Events"
 // import {FaShoppingCart} from 'react-icons/fa'
 
 const IndexPage = ({data}) => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
-    <BackgroundSection img={data.img.childImageSharp.fluid}/>
-    <Link to='/reservation/'><button>Make Reservation
-                           </button></Link>
+ <div>
     <Info/>
-    {/* <FaShoppingCart/> */}
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
+
     <Beer items={data.beer}/>
     <Food />
     <Events/>
-  </Layout>
+  </div>
+
 )
 
 export const query = graphql`

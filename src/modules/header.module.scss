@@ -6,8 +6,9 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Sen', sans-serif;
     font-size: 10px;
+    
 }
 
 a {
@@ -42,6 +43,7 @@ header {
     top: 0;
     left:0;
     z-index: 1;
+    
 }
 
 .container {
@@ -56,7 +58,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 2rem 0;
     border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
@@ -66,7 +68,7 @@ nav {
 
 .menuIcons i {
     font-size: 3.5rem;
-    color: #fafafa;
+    color: black;
     cursor: pointer;
 }
 
@@ -105,7 +107,7 @@ nav {
 }
 
 .navLink {
-    font-size: 1.6rem;
+    font-size: 4rem;
     text-transform: uppercase;
     color: rgba(0,0,0,.7);
 }
@@ -113,10 +115,13 @@ nav {
 .hero {
     width:100%;
     height: 80vh;
-    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9)0%, rgba(72,56,149,0.8)
-     100%), url("../images/thebar.jpg") center no-repeat;
+    background: linear-gradient(135deg, rgba(133, 220, 186, 0.9) 0%, rgba(133, 220, 186, 0.9) 100%), url("../images/heyday.jpg") center no-repeat;
     background-size: cover;
     position: relative;
+}
+
+.navLink:hover {
+    color: #eb648c;
 }
 
 .hero::before{
@@ -124,8 +129,8 @@ nav {
    position: absolute;
    left:0;
    border: 0;
-   bottom:0;
-   height: 4.7rem;
+   bottom:-30px;
+   height: 4.2rem;
    width: 100%;
    background: url("../images/wave-small.png") center no-repeat;
    background-size: cover;
@@ -133,25 +138,30 @@ nav {
 
 .mainMessage {
     width: 100%;
-    max-width: 50rem;
-    color: #fafafa;
+    // width: 50rem;
+    color:black;
     text-transform: uppercase;
-    transform: translate(20%);
+    // transform: translate(20%);
+    text-align: center;
+    position: relative;
+    align-items: center;
+    top: -15rem;
 }
 
 .mainMessage h3 {
-    font-size: 1.6rem;
+    font-size: 7rem;
+    margin: 1rem;
+    color: white;
 }
 
-.mainMessage h1 {
-    font-family: 'Aldrich', sans-serif;
-    font-size: 4rem;
-    margin: 1rem 0;
-}
-
-.mainMessage h1 {
+.mainMessage p {
+    font-size: 1.4rem;
+    margin: 1rem;
     text-transform: lowercase;
 }
+
+
+
 
 .btn {
     background-color: #eb648c;
@@ -162,11 +172,112 @@ nav {
     padding: 1rem 2.5rem;
     text-transform: uppercase;
     transition: background-color 650ms;
+    position: relative;
+    // left: 14rem;
+    font-size: 1.4rem;
 }
 
 .btn:hover {
     background-color: #ce587b;
 }
+
+
+
+@media screen and (min-width: 350px){
+    // .main-message {
+    //     transform: translateY(40%);
+    // }
+}
+
+@media screen and (min-width: 470px){
+    .hero::before {
+        height:10rem;
+        background:url("../images/wave-medium.png") center no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .header {
+        height:8rem;
+    }
+    .navBrand {
+        width: 3.5rem;
+    }
+    .navList{
+        width: initial;
+        height: initial;
+        background: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        display: flex;
+        flex-direction: row;
+        transition: initial;
+    }
+
+    .menuIcons {
+        display:none;
+    }
+
+    .navItem {
+        margin: 0 2.5rem;
+    }
+
+    .navLink, 
+    .current {
+        color: black;
+        position: relative;
+        font-size: 1.7rem;
+    };
+
+    .current::before {
+        content:"";
+        position: absolute;
+        left:0;
+        bottom: -.5rem;
+        background-color: #eb648c;
+        width: 100%;
+        height:2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms;
+    }
+
+    .current::before {
+        transform: scaleX(1);
+    }
+
+    .navLink::before {
+        transform: scaleX(1);
+    }
+
+    .hero{
+        height: 60vh;
+    }
+
+    .mainMessage{
+        transform: translateY(70%);
+    }
+
+}
+
+@media screen and (min-width: 950px){
+    .hero::before {
+        height:16rem;
+        background:url("../images/wave-large.png")center no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .hero {
+       height: 75vh;
+    }
+}
+
+
+
 
 
 
