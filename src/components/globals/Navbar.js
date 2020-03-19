@@ -44,9 +44,6 @@ export default class Navbar extends Component {
                     </li>
                     <li className={headerStyles.navItem}>
                         <a href="" className={headerStyles.navLink}>Events</a>
-                        <li className={headerStyles.navItem}>
-                        <a href="" className={headerStyles.navLink}>About</a>
-                    </li>
                     </li>
                 </ul>
             </nav>

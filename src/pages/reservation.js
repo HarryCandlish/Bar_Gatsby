@@ -1,7 +1,7 @@
 import React from "react"
 
 import Form from "../components/home/Form"
-import SEO from "../components/seo"
+
 
 
 const Reservation = () => (
