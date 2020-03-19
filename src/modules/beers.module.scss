@@ -1,10 +1,13 @@
 .beers {
-    padding-top: 5%;
     text-align: center;
+    position: relative;
+    top: 5rem;
 }
 
 
 .grid {
+    top: 5rem;
+    position: relative;
     padding-top: 5%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -46,6 +49,7 @@
     text-transform: uppercase;
     margin: 2rem 0;
     color:#eb648c;
+    padding-bottom: 1rem;
 }
 
 .gridItem p {
@@ -78,12 +82,14 @@
 
 .titleHeading h3 {
     font-size: 1.6rem;
+    padding-bottom: 1rem;
 }
 
 .titleHeading h1 {
     font-size: 4rem;
     margin: 1rem;
     text-transform: uppercase;
+    color: #eb648c;
 }
 
 .titleHeading p {

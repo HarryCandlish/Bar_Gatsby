@@ -18,13 +18,14 @@ export default class Beer extends Component {
           <section className={beerStyles.beers}>
           <div className={beerStyles.container}>
             <div className={beerStyles.titleHeading}>
-                <h3>ALL OUR BEERS ARE HANDCRAFTED IN HOUSE</h3>
-                <h1>BEERS ON TAP</h1>
+                <h3 name="beer">ALL OUR BEERS ARE HANDCRAFTED IN HOUSE</h3>
+                <h1 name="">BEERS ON TAP</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
             </div>
             </div>
             <div className={beerStyles.grid}>
                     {this.state.beers.map(({node}) => {
+                        if (node.pouring === true){
                         return(
                             <div className={`${beerStyles.gridItem} ${beerStyles.craftBeer}`} key={node.id}>
                 
@@ -33,7 +34,7 @@ export default class Beer extends Component {
                                   <p>{node.description}</p>
                             </div>
                           );
-                        })}
+        }})}
                   </div>
        </section>
   </div>

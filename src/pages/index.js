@@ -1,6 +1,8 @@
 import React from "react"
 import {Link, graphql} from 'gatsby'
 
+
+
 // import Layout from "../components/layout"
 // import BackgroundSection from '../components/globals/BackgroundSection'
 import SEO from "../components/seo"
@@ -8,6 +10,7 @@ import Info from "../components/home/Info"
 import Beer from "../components/home/Beer"
 import Food from "../components/home/Food"
 import Events from "../components/home/Events"
+import Footer from "../components/globals/Footer"
 
 
 // import {FaShoppingCart} from 'react-icons/fa'
@@ -16,10 +19,10 @@ const IndexPage = ({data}) => (
  <div>
     <Info/>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
-
-    <Beer items={data.beer}/>
+      <Beer items={data.beer}/>
     <Food />
     <Events/>
+    <Footer/>
   </div>
 
 )

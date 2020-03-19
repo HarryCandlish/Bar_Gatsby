@@ -1,0 +1,64 @@
+.form {
+    background: #F8F8FF; 
+    max-width: 50%; 
+    position: relative; 
+    top: 100px; 
+    left: 20%;
+    text-align: center;
+}
+
+.title {
+    font-size: 20px;
+    text-align: center;
+    color: #eb648c;
+}
+
+.btn {
+    background-color: #eb648c;
+    border-radius: 2rem;
+    color: #fafafa;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+    position: relative;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border: none;
+    
+}
+
+.btn:hover {
+    background-color: #ce587b;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.formInputs {
+    height: 32px;
+}
+
+.formInputsText {
+    height: 29px;
+    width: 200px;
+}
+
+.formInputsEnquiry {
+    height: 50px;
+    width: 200px;
+}
+
+.datepicker {
+    height: 29px;
+    width: 200px;
+}
+
+
+
+
+
+
+

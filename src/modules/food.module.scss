@@ -3,6 +3,7 @@
     height: 80vh;
     background-size: cover;
     position: relative;
+    top: 18rem;
 }
 
 .menu::before {
@@ -12,16 +13,18 @@
     left: 0;
     width: 100%;
     height: 4.7rem;
+    padding: 0;
 }
 
 .food {
     width: 50%;
     position: absolute;
-    top: 25%;
+    top: 28%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #F8F8FF ;
     padding: 4rem;
+    
 }
 
 .textBox {
@@ -44,11 +47,14 @@ color: black;
 
 .textBox h3 {
     font-size: 1.6rem;
+    padding-bottom: 1rem;
 }
 
 .textBox h1 {
     font-size: 4rem;
     margin: 1rem;
+    color: #eb648c;
+    padding-bottom: 1rem;
 }
 
 .textBox p {
@@ -79,4 +85,8 @@ color: black;
 
 .btn:hover {
     background-color: #ce587b;
+}
+
+.btn:focus {
+    outline: 0;
 }

@@ -1,13 +1,25 @@
 import React from "react";
+import {Link} from 'gatsby'
 
-import datepicker from 'js-datepicker'
+import "react-datepicker/dist/react-datepicker.css"
 
-// const picker = datepicker('#picker')
+import formStyles from "../../modules/form.module.scss"
+import ReactDatePicker from "react-datepicker";
 
-export default function Form() {
+class Form extends React.Component {
+    state = {
+      startDate: new Date()
+    };
+
+    handleChange = date => {
+      this.setState({
+        startDate: date
+      });
+    };
+  render(){
   return (
-    <section style={{backgroundColor: `#f5f5f5`, maxWidth:`60%`, position: `relative`, top:`100px`, left: `20%`}} className="contact py-5">
-        <h2 style={{textAlign: `center`}}>Make a reservation</h2>
+    <section className={formStyles.form}>
+        <h2 className={formStyles.title}>Make a reservation</h2>
         <br></br>
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
@@ -16,34 +28,49 @@ export default function Form() {
             method="POST"
           >
             {/* name */}
-    <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="First name"/>
+    <div >
+    <div className={formStyles.formInputs}>
+      <input className={formStyles.formInputsText} name="firstname" type="text" placeholder="First name"/>
+      <br></br>
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last name"/>
-    </div>
-  </div>
-  <br></br>
-  <div class="form-group">
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email'/>
-  </div>
-  <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Date"/>
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Time"/>
+    <div className={formStyles.formInputs}>
+      <input className={formStyles.formInputsText} name="lastname" type="text" placeholder="Last name"/>
     </div>
   </div>
   <br></br>
-  <div class="form-group">
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder='Enquiries'/>
+  <div className={formStyles.formInputs}>
+    <input className={formStyles.formInputsText}type="email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Email'/>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div >
+
+    <div className={formStyles.formInputs}>
+      <ReactDatePicker
+        selected={this.state.startDate}
+        onChange={this.handleChange}
+        className={formStyles.datepicker}
+        name="date"
+      />
+    </div>
+    <div className={formStyles.formInputs}>
+      <input className={formStyles.formInputsText} type="text" name="time" placeholder="Time"/>
+    </div>
+  </div>
+  <br></br>
+  <div >
+    <input className={formStyles.formInputsEnquiry} type="text" placeholder='Enquiries' name="enquiries
+    "/>
+  </div>
+  <button className={formStyles.btn} type="submit">Submit</button>
           </form>
+          <br></br>
+          <small>We will be in touch after submitting your information</small>
+          <br></br><br></br>
+          <Link  to ='/'>Return Home</Link>
         </div>
       </div>
     </section>
   );
 }
+}
+
+export default Form;
