@@ -24,7 +24,7 @@ class Form extends React.Component {
       <div className="row">
         <div className="col-10 col-sm-8 col-md-6 mx-auto">
           <form
-            action="https://formspree.io/hcnd90@gmail.com"
+            action="https://formspree.io/bookings@heydaybeer.com"
             method="POST"
           >
             {/* name */}
